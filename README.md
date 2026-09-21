@@ -1,0 +1,1 @@
+# bosh-qotirma-ULUG-BEK.R
