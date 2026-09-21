@@ -1,0 +1,208 @@
+
+<!DOCTYPE html>
+<html lang="uz">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="#080b18">
+  <title>KOROJI — Bosh Qotirma</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+  <div class="app">
+
+    <!-- START -->
+    <section id="startScreen" class="screen active">
+      <div class="logo">KOROJI</div>
+      <div class="subtitle">🧠 BOSH QOTIRMA</div>
+
+      <div class="start-card">
+        <h1>Aqlingni sinab ko‘r!</h1>
+        <p>800 ta savol seni kutmoqda.</p>
+
+        <input
+          id="playerName"
+          type="text"
+          maxlength="20"
+          placeholder="Ismingizni kiriting..."
+          autocomplete="off"
+        >
+
+        <button id="startBtn" class="main-btn">
+          🚀 Boshlash
+        </button>
+      </div>
+
+      <div class="footer">Ishlab chiqaruvchi: <b>ULUG'BEK.R</b></div>
+    </section>
+
+
+    <!-- MODES -->
+    <section id="modeScreen" class="screen">
+      <header class="topbar">
+        <div>
+          <span class="small">O‘yinchi</span>
+          <strong id="displayName"></strong>
+        </div>
+
+        <div class="rating-box">
+          ⭐ <span id="rating">0</span>
+        </div>
+      </header>
+
+      <h1 class="page-title">Rejimni tanlang</h1>
+      <p class="page-subtitle">Har bir rejimda 100 ta savol</p>
+
+      <div id="modeGrid" class="mode-grid"></div>
+
+      <button id="leaderboardBtn" class="secondary-btn">
+        🏆 Reyting
+      </button>
+
+      <div class="footer">Ishlab chiqaruvchi: <b>ULUG'BEK.R</b></div>
+    </section>
+
+
+    <!-- GAME -->
+    <section id="gameScreen" class="screen">
+
+      <header class="game-header">
+        <button id="quitBtn" class="icon-btn">←</button>
+
+        <div class="game-mode-info">
+          <span id="gameModeName">Mantiqiy</span>
+          <small id="questionNumber">1 / 100</small>
+        </div>
+
+        <div id="timer" class="timer">
+          30
+        </div>
+      </header>
+
+      <div class="progress-wrap">
+        <div id="progressBar" class="progress-bar"></div>
+      </div>
+
+      <div class="score-line">
+        <span>🏆 Ochko: <b id="score">0</b></span>
+        <span>⭐ Reyting: <b id="gameRating">0</b></span>
+      </div>
+
+      <main class="question-card">
+
+        <div id="questionType" class="question-type">
+          🧠 SAVOL
+        </div>
+
+        <h2 id="questionText">
+          Savol yuklanmoqda...
+        </h2>
+
+        <div id="answers" class="answers"></div>
+
+        <div id="feedback" class="feedback"></div>
+
+        <button id="nextBtn" class="next-btn hidden">
+          Keyingi savol →
+        </button>
+
+      </main>
+
+      <div class="stats">
+        <div>
+          <span>✅</span>
+          <b id="correctCount">0</b>
+          <small>To‘g‘ri</small>
+        </div>
+
+        <div>
+          <span>❌</span>
+          <b id="wrongCount">0</b>
+          <small>Noto‘g‘ri</small>
+        </div>
+
+        <div>
+          <span>🎯</span>
+          <b id="accuracy">0%</b>
+          <small>Aniqlik</small>
+        </div>
+      </div>
+
+      <div class="footer">Ishlab chiqaruvchi: <b>ULUG'BEK.R</b></div>
+    </section>
+
+
+    <!-- RESULT -->
+    <section id="resultScreen" class="screen">
+
+      <div class="result-icon">🏆</div>
+
+      <h1>Natija</h1>
+      <p class="result-name" id="resultName"></p>
+
+      <div class="result-score">
+        <span>OCHKO</span>
+        <strong id="finalScore">0</strong>
+      </div>
+
+      <div class="result-grid">
+        <div>
+          <b id="finalCorrect">0</b>
+          <span>To‘g‘ri</span>
+        </div>
+
+        <div>
+          <b id="finalWrong">0</b>
+          <span>Noto‘g‘ri</span>
+        </div>
+
+        <div>
+          <b id="finalAccuracy">0%</b>
+          <span>Aniqlik</span>
+        </div>
+
+        <div>
+          <b id="finalRating">0</b>
+          <span>Reyting</span>
+        </div>
+      </div>
+
+      <div class="result-buttons">
+        <button id="againBtn" class="main-btn">
+          🔄 Qayta o‘ynash
+        </button>
+
+        <button id="modesBtn" class="secondary-btn">
+          🎮 Rejimlar
+        </button>
+      </div>
+
+      <div class="footer">Ishlab chiqaruvchi: <b>ULUG'BEK.R</b></div>
+    </section>
+
+
+    <!-- LEADERBOARD -->
+    <section id="leaderboardScreen" class="screen">
+
+      <button id="backFromRating" class="back-btn">← Orqaga</button>
+
+      <h1>🏆 Reyting</h1>
+      <p class="page-subtitle">Eng yaxshi natijalar</p>
+
+      <div id="leaderboard" class="leaderboard"></div>
+
+      <button id="clearRating" class="danger-btn">
+        Reytingni tozalash
+      </button>
+
+      <div class="footer">Ishlab chiqaruvchi: <b>ULUG'BEK.R</b></div>
+    </section>
+
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
+
